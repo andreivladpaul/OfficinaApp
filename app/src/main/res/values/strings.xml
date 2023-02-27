@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Officina2.0</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="name_text_input">Nome</string>
+    <string name="surname_text_input">Cognome</string>
+    <string name="email_text_input">Email</string>
+    <string name="add_to_db_btn">Inserisci cliente</string>
+    <string name="add_to_db_btn_desc">Aggiungi al database</string>
+    <string name="id_txt_example">1</string>
+    <string name="marca_title_tv">Marca</string>
+    <string name="modello_title_tv">Modello</string>
+    <string name="nr_telaio_title_tv">Nr. Telaio</string>
+    <string name="targa_title_tv">Targa</string>
+    <string name="elenco_auto_bottom_menu_title">Elenco Auto</string>
+    <string name="marca_hint">Marca</string>
+    <string name="modello_hint">Modello</string>
+    <string name="nr_telaio_hint">Nr telaio</string>
+    <string name="targa_hint">Targa</string>
+    <string name="add_auto_to_db">Inserisci auto</string>
+    <string name="id_cliente_hint">Numero cliente</string>
+    <string name="inizia_text_btn">Inizia</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="aggiungi_intervento_text_bottom_btn">Aggiungi intervento</string>
+    <string name="add_intervention_to_db_text">Inserisci intervento</string>
+    <string name="descrizione_text_input">Descrizione</string>
+    <string name="durata_text_input">Durata</string>
+    <string name="data_arrivo_text_input">Data arrivo</string>
+    <string name="data_consegna_text_input">Data consegna</string>
+    <string name="targa_text_input">Targa</string>
+    <string name="numero_macchina_text_hint">Numero Macchina</string>
+    <string name="descrizione_tv">Descrizione</string>
+    <string name="intervento_title">Intervento</string>
+    <string name="data_consegna_tv">Data Consegna</string>
+    <string name="durata_tv">Durata in ore</string>
+</resources>

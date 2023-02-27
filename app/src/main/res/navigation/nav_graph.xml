@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listaClientiFragment">
+
+    <fragment
+        android:id="@+id/listaClientiFragment"
+        android:name="com.example.officina20.fragments.clienti.ListaClientiFragment"
+        android:label="Elenco clienti"
+        tools:layout="@layout/fragment_lista_clienti" >
+        <action
+            android:id="@+id/action_listFragment_to_addFragment"
+            app:destination="@id/aggiungiClienteFragment" />
+        <action
+            android:id="@+id/action_listaClientiFragment_to_listaAutoFragment"
+            app:destination="@id/listaAutoFragment" />
+        <action
+            android:id="@+id/action_listaClientiFragment_to_aggiuntiInterventoFragment"
+            app:destination="@id/aggiuntiInterventoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aggiungiClienteFragment"
+        android:name="com.example.officina20.fragments.clienti.AggiungiClienteFragment"
+        android:label="Aggiungi cliente" >
+        <action
+            android:id="@+id/action_aggiungiClienteFragment_to_listaClientiFragment"
+            app:destination="@id/listaClientiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listaAutoFragment"
+        android:name="com.example.officina20.fragments.auto.ListaAutoFragment"
+        android:label="Elenco auto"
+        tools:layout="@layout/fragment_lista_auto" >
+        <action
+            android:id="@+id/action_listaAutoFragment_to_listaClientiFragment"
+            app:destination="@id/listaClientiFragment"
+            app:popUpTo="@id/listaClientiFragment" />
+        <action
+            android:id="@+id/action_listaAutoFragment_to_aggiungiAutoFragment"
+            app:destination="@id/aggiungiAutoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aggiungiAutoFragment"
+        android:name="com.example.officina20.fragments.auto.AggiungiAutoFragment"
+        android:label="Aggiungi auto"
+        tools:layout="@layout/fragment_add_auto" >
+        <action
+            android:id="@+id/action_aggiungiAutoFragment_to_listaClientiFragment"
+            app:destination="@id/listaClientiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aggiuntiInterventoFragment"
+        android:name="com.example.officina20.fragments.interventi.AggiuntiInterventoFragment"
+        android:label="Aggiunti Intervento"
+        tools:layout="@layout/fragment_aggiunti_intervento" >
+        <action
+            android:id="@+id/action_aggiuntiInterventoFragment_to_listaClientiFragment"
+            app:destination="@id/listaClientiFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".fragments.auto.AutoClienteFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:gravity="center"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_marginBottom="40dp"
+        android:text="Auto Cliente"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:gravity="start"
+        android:text="@string/marca_title_tv"/>
+    <TextView
+        android:id="@+id/marca_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:textSize="18sp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:gravity="start"
+        android:text="@string/modello_title_tv"/>
+    <TextView
+        android:id="@+id/modello_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:textSize="18sp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:gravity="start"
+        android:text="@string/nr_telaio_title_tv"/>
+    <TextView
+        android:id="@+id/telaio_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:textSize="18sp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:gravity="start"
+        android:text="@string/targa_title_tv"/>
+    <TextView
+        android:id="@+id/targa_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        />
+    <Button
+        android:id="@+id/intervento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Intervento"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dimen_24"
+        />
+
+</LinearLayout>

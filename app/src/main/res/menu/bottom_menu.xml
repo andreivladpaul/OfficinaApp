@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/listaAutoFragment"
+        android:title="@string/elenco_auto_bottom_menu_title"
+        android:icon="@drawable/ic_car"
+        />
+    <item
+        android:id="@+id/aggiuntiInterventoFragment"
+        android:title="@string/aggiungi_intervento_text_bottom_btn"
+        android:icon="@drawable/id_add"
+        />
+
+</menu>

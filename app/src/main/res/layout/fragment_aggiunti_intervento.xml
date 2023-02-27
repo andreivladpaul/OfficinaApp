@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".fragments.clienti.ListaClientiFragment">
+
+
+    <EditText
+        android:id="@+id/descrizione"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textSize="18sp"
+        android:inputType="textMultiLine"
+        android:hint="@string/descrizione_text_input"/>
+    <EditText
+        android:id="@+id/durata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textSize="18sp"
+        android:inputType="numberDecimal"
+        android:hint="@string/durata_text_input"/>
+    <EditText
+        android:id="@+id/data_arrivo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textSize="18sp"
+        android:inputType="date"
+        android:hint="@string/data_arrivo_text_input"/>
+    <EditText
+        android:id="@+id/data_consegna"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textSize="18sp"
+        android:inputType="date"
+        android:hint="@string/data_consegna_text_input"/>
+    <EditText
+        android:id="@+id/auto_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textSize="18sp"
+        android:inputType="number"
+        android:hint="@string/numero_macchina_text_hint"/>
+
+    <Button
+        android:id="@+id/add_intervention_to_db_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#083185"
+        android:hint="@string/add_intervention_to_db_text"
+        android:textColorHint="#FFFFFF"
+        />
+</LinearLayout>

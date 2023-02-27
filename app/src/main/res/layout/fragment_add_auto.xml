@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".fragments.auto.AggiungiAutoFragment">
+
+
+    <EditText
+        android:id="@+id/marca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textSize="18sp"
+        android:inputType="text"
+        android:hint="@string/marca_hint"/>
+    <EditText
+        android:id="@+id/modello"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textSize="18sp"
+        android:inputType="text"
+        android:hint="@string/modello_hint"/>
+    <EditText
+        android:id="@+id/nr_telaio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textSize="18sp"
+        android:inputType="text"
+        android:hint="@string/nr_telaio_hint"/>
+    <EditText
+        android:id="@+id/targa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textSize="18sp"
+        android:inputType="textEmailAddress"
+        android:hint="@string/targa_hint"
+        />
+    <EditText
+        android:id="@+id/numero_cliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textSize="18sp"
+        android:inputType="textEmailAddress"
+        android:hint="@string/id_cliente_hint"
+        />
+
+    <Button
+        android:id="@+id/add_auto_to_db_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#083185"
+        android:text="@string/add_auto_to_db"
+        android:textColor="@color/white"
+        android:textColorHint="#FFFFFF"
+
+        />
+</LinearLayout>
