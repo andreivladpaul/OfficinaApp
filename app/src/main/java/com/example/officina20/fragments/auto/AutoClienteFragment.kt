@@ -61,12 +61,11 @@ class AutoClienteFragment : Fragment() {
                     view.findViewById<TextView>(R.id.targa_tv).text = auto.targa
 
                 }else {
-
                 val snackbar =
                     Snackbar.make(view, "Non ci sono auto inserite", Snackbar.LENGTH_LONG)
                 snackbar.show()
+                parentFragmentManager.popBackStack()
 
-                childFragmentManager.popBackStackImmediate()
             }
 
         }

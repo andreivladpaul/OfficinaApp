@@ -63,6 +63,7 @@ class DettagliInterventiFragment : Fragment() {
                 val snackbar =
                     Snackbar.make(view, "Non ci sono interventi inseriti", Snackbar.LENGTH_LONG)
                 snackbar.show()
+                parentFragmentManager.popBackStack()
             }
         }
         return view

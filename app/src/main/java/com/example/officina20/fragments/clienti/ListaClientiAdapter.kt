@@ -40,6 +40,7 @@ class ListAdapter(private var listener: OnItemClickListener) : RecyclerView.Adap
         holder.itemView.findViewById<TextView>(R.id.id_txt).text = currentItem.clienteId.toString()
         holder.itemView.findViewById<TextView>(R.id.name_txt).text = currentItem.nome + " " + currentItem.cognome
         holder.itemView.findViewById<TextView>(R.id.email_txt).text = currentItem.email
+
         holder.itemView.setOnClickListener {
             listener.onItemClick(currentItem.clienteId)
         }
