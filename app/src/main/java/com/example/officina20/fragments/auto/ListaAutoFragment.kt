@@ -1,6 +1,7 @@
 package com.example.officina20.fragments.auto
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +13,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.officina20.R
 import com.example.officina20.fragments.clienti.ListAdapter
+import com.example.officina20.fragments.interventi.DettagliInterventiFragment
+import com.example.officina20.interfaces.OnItemClickListener
 import com.example.officina20.viewmodel.AutoViewModel
 import com.example.officina20.viewmodel.UserViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -22,7 +25,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
  * Use the [ListaAutoFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class ListaAutoFragment : Fragment() {
+class ListaAutoFragment : Fragment(), OnItemClickListener{
     private lateinit var autoViewModel: AutoViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,7 +41,7 @@ class ListaAutoFragment : Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_lista_auto, container, false)
 
-        val adapter = ListAdapter()
+        val adapter = ListAutoAdapter(this)
         val recyclerView = view.findViewById<RecyclerView>(R.id.recycler_auto)
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
@@ -54,6 +57,25 @@ class ListaAutoFragment : Fragment() {
         }
 
         return view
+    }
+
+
+    override fun onItemClick(position: Int) {
+
+        val selectedItem = autoViewModel.onRecyclerViewClick(position)
+        val bundle = Bundle().apply {
+            putInt("autoId", selectedItem)
+        }
+        val dettagliInterventoFragment = DettagliInterventiFragment()
+        dettagliInterventoFragment.arguments = bundle
+        Log.d("ID INTERVENTO DA LISTA AUTO","$selectedItem")
+        // Avvia il secondo Fragment
+
+        requireActivity().supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container_view, dettagliInterventoFragment)
+            .addToBackStack(null)
+            .commit()
+
     }
 
 }

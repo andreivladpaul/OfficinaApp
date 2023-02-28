@@ -13,17 +13,17 @@ import com.example.officina20.interfaces.OnItemClickListener
 
 
 //class che ha la funzione di adapter per il recycler view
-class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
+class ListAutoAdapter(private var listener: OnItemClickListener): RecyclerView.Adapter<ListAutoAdapter.MyViewHolder>() {
 
     private var autoList = emptyList<Auto>()
     //gestore della view(layout)
-    inner class MyViewHolder(itemView:View)
+    inner class MyViewHolder(itemView:View,  private val listener: OnItemClickListener)
         :RecyclerView.ViewHolder(itemView){
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         return MyViewHolder(LayoutInflater.from(parent.context)
-            .inflate(R.layout.auto_custom_row,parent,false))
+            .inflate(R.layout.auto_custom_row,parent,false), listener)
     }
     override fun getItemCount(): Int = autoList.size
 
@@ -34,6 +34,10 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         holder.itemView.findViewById<TextView>(R.id.modello_txt)?.text = currentItem.modello
         holder.itemView.findViewById<TextView>(R.id.targa_txt)?.text = currentItem.targa
         holder.itemView.findViewById<TextView>(R.id.nr_telaio_txt)?.text = currentItem.nTelaio
+
+        holder.itemView.setOnClickListener {
+            listener.onItemClick(currentItem.idAuto)
+        }
     }
 
     @SuppressLint("NotifyDataSetChanged")

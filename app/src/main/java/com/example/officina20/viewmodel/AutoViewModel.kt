@@ -30,4 +30,5 @@ class AutoViewModel(application: Application): AndroidViewModel(application) {
             repository.addAuto(auto)
         }
     }
+    fun onRecyclerViewClick(position: Int) = position;
 }

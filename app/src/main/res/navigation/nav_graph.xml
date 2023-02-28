@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_listaClientiFragment_to_aggiuntiInterventoFragment"
             app:destination="@id/aggiuntiInterventoFragment" />
+        <action
+            android:id="@+id/action_listaClientiFragment_to_mainHomeActivity"
+            app:destination="@id/mainHomeActivity" />
     </fragment>
     <fragment
         android:id="@+id/aggiungiClienteFragment"
@@ -59,4 +62,8 @@
             android:id="@+id/action_aggiuntiInterventoFragment_to_listaClientiFragment"
             app:destination="@id/listaClientiFragment" />
     </fragment>
+    <activity
+        android:id="@+id/mainHomeActivity"
+        android:name="com.example.officina20.MainHomeActivity"
+        android:label="MainHomeActivity" />
 </navigation>
