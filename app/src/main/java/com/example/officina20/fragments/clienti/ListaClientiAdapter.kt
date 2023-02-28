@@ -21,7 +21,6 @@ class ListAdapter(private var listener: OnItemClickListener) : RecyclerView.Adap
     inner class MyViewHolder(itemView: View, private val listener: OnItemClickListener) :
         RecyclerView.ViewHolder(itemView) {
 
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {

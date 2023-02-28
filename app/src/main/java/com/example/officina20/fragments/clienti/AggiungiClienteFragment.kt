@@ -60,7 +60,7 @@ class AggiungiClienteFragment : Fragment() {
                 MotionToast.GRAVITY_BOTTOM,
                 MotionToast.LONG_DURATION,
                 ResourcesCompat.getFont(requireActivity(), www.sanju.motiontoast.R.font.helvetica_regular))
-            //dopo aver aggiunto l'utente ritorniamo alla list user
+
             findNavController().navigate(R.id.action_aggiungiClienteFragment_to_listaClientiFragment)
         } else {
             MotionToast.darkToast(requireActivity(),
@@ -71,12 +71,9 @@ class AggiungiClienteFragment : Fragment() {
                 MotionToast.LONG_DURATION,
                 ResourcesCompat.getFont(requireActivity(), www.sanju.motiontoast.R.font.helvetica_regular))
         }
-
-
     }
     private fun inputCheck(firstName: String,lastName:String,email:String): Boolean {
-        return!(firstName.isEmpty() && lastName.isEmpty() &&
-                email.isEmpty())
+        return!(firstName.isEmpty() && lastName.isEmpty() && email.isEmpty())
     }
 
 }

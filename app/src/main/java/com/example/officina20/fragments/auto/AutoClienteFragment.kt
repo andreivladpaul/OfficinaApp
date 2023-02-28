@@ -14,16 +14,10 @@ import com.example.officina20.database.dao.DaoAuto
 import com.example.officina20.database.entity.Auto
 import com.example.officina20.fragments.clienti.ListaClientiFragment
 import com.example.officina20.fragments.interventi.DettagliInterventiFragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-
-
-/**
- * A simple [Fragment] subclass.
- * Use the [AutoClienteFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 
 class AutoClienteFragment : Fragment() {
     private var mBundle: Bundle? = null
@@ -84,6 +78,7 @@ class AutoClienteFragment : Fragment() {
 
         }
 
+        requireActivity().findViewById<BottomNavigationView>(R.id.bottom_nav).visibility = View.GONE
         return view
     }
 

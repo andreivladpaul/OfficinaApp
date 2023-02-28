@@ -17,6 +17,7 @@ import com.example.officina20.fragments.auto.AutoClienteFragment
 //import com.example.officina20.fragments.auto.AutoClienteFragment
 import com.example.officina20.interfaces.OnItemClickListener
 import com.example.officina20.viewmodel.UserViewModel
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class ListaClientiFragment : Fragment(), OnItemClickListener {
@@ -32,7 +33,6 @@ class ListaClientiFragment : Fragment(), OnItemClickListener {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_lista_clienti, container, false)
-
 
         //Recycler
         val adapter = ListAdapter(this)
@@ -51,6 +51,7 @@ class ListaClientiFragment : Fragment(), OnItemClickListener {
             findNavController().navigate(R.id.action_listFragment_to_addFragment)
         }
 
+        requireActivity().findViewById<BottomNavigationView>(R.id.bottom_nav).visibility = View.VISIBLE
         return view
     }
 
@@ -68,7 +69,6 @@ class ListaClientiFragment : Fragment(), OnItemClickListener {
             .replace(R.id.fragment_container_view, autoCliente)
             .addToBackStack(null)
             .commit()
-
     }
 
 }

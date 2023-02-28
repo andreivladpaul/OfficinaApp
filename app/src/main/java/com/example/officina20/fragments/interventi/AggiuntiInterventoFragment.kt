@@ -47,20 +47,18 @@ class AggiuntiInterventoFragment : Fragment() {
 
 
         if (inputCheck(descrizione,durata,dataArrivo,dataConsegna,autoId)){
-            //crea un nuova auto
+
             val intervento = Intervento(0,descrizione,durata.toFloat(),dataArrivo,dataConsegna,autoId.toInt())
             interventoViewModel.addIntervention(intervento)
-
-/*            MotionToast.darkToast(requireActivity(),
+            MotionToast.darkToast(requireActivity(),
                 "Aggiunta avvenuta con successo!",
                 "Intervento aggiunto",
                 MotionToastStyle.SUCCESS,
                 MotionToast.GRAVITY_BOTTOM,
                 MotionToast.LONG_DURATION,
-                ResourcesCompat.getFont(requireActivity(), www.sanju.motiontoast.R.font.helvetica_regular))*/
+                ResourcesCompat.getFont(requireActivity(), www.sanju.motiontoast.R.font.helvetica_regular))
 
 
-            //dopo aver aggiunto l'auto ritorniamo all'elenco delle auto
             findNavController().navigate(R.id.action_aggiuntiInterventoFragment_to_listaClientiFragment)
         } else {
             MotionToast.darkToast(requireActivity(),
@@ -70,8 +68,6 @@ class AggiuntiInterventoFragment : Fragment() {
                 MotionToast.GRAVITY_BOTTOM,
                 MotionToast.LONG_DURATION,
                 ResourcesCompat.getFont(requireActivity(), www.sanju.motiontoast.R.font.helvetica_regular))
-
-
         }
 
     }

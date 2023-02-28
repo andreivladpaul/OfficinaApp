@@ -13,6 +13,7 @@ import com.example.officina20.database.OfficinaDatabase
 import com.example.officina20.database.dao.DaoAuto
 import com.example.officina20.database.dao.DaoInterventi
 import com.example.officina20.fragments.clienti.ListaClientiFragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -40,32 +41,22 @@ class DettagliInterventiFragment : Fragment() {
 
         val view =inflater.inflate(R.layout.fragment_dettagli_interventi, container, false)
 
-
-
         lifecycleScope.launch(Dispatchers.IO){
 
             try {
                 val intervento = interventoDao.getInterventionByPlate(autoId!!)
-                Log.d("Intervento","$intervento")
-
                 view.findViewById<TextView>(R.id.descrizione).text = intervento.descrizione
                 view.findViewById<TextView>(R.id.durata).text = intervento.durata.toString()
                 view.findViewById<TextView>(R.id.data_consegna).text = intervento.dataConsegna
 
             }catch (e: java.lang.NullPointerException) {
-                /*
-                requireActivity().supportFragmentManager.beginTransaction()
-                    .replace(R.id.fragment_container_view, ListaClientiFragment())
-                    .addToBackStack(null)
-                    .commit()
-
-                 */
                 val snackbar =
                     Snackbar.make(view, "Non ci sono interventi inseriti", Snackbar.LENGTH_LONG)
                 snackbar.show()
                 parentFragmentManager.popBackStack()
             }
         }
+        requireActivity().findViewById<BottomNavigationView>(R.id.bottom_nav).visibility = View.GONE
         return view
     }
 
